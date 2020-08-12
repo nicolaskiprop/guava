@@ -3,7 +3,7 @@ from flask import Flask, redirect, url_for
 from flask_restful import Api
 from flask_jwt_extended import JWTManager
 from flask_cors import CORS
-
+# local imports
 from Instance.config import app_config
 from .auth.auth import SignUp, Login
 
@@ -14,8 +14,8 @@ jwt = JWTManager()
 
 def create_app(config_mode):
     app = Flask(__name__, instance_relative_config=True)
-    app.config.from_object(app_config[config_mode])
-    app.config.from_pyfile("config.py")
+    app.config.from_object(app.config)
+    app.config.from_pyfile('config.py', silent=True)
 
     jwt.init_app(app)
     CORS(app)
