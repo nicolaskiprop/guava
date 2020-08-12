@@ -34,7 +34,7 @@ def create_app(config_mode):
     from .auth import auth_blueprint as auth_blp
 
     auth = Api(auth_blp)
-    app.register_blueprint(auth_blp, url_prefix="/api/v2")
+    app.register_blueprint(auth_blp, url_prefix="/api")
 
     # Routes
     auth.add_resource(SignUp, '/auth/signup')
