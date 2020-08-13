@@ -2,7 +2,7 @@
 
 ## Prerequisite
 
-- [Python3.6](https://www.python.org/downloads/release/python-365/)
+- [Python3.8](https://www.python.org/downloads/release/python-365/)
 - [Virtual Environment](https://virtualenv.pypa.io/en/stable/installation/)
 
 # Installation and Setup
@@ -15,7 +15,7 @@ git clone https://github.com/nicolaskiprop/guava.git
 
 ### Create and activate a virtual environment
 
-    virtualenv env --python=python3.6
+    virtualenv env --python=python3.8
 
     source env/bin/activate
 
@@ -36,8 +36,8 @@ $ flask run
 ## Endpoints Available
 | Method | Endpoint                        | Description                           | Roles         |
 | ------ | ------------------------------- | ------------------------------------- | ------------  |
-| POST   | /api/v2/auth/signup             | sign up a user                        | users         |
-| POST   | /api/v2/auth/login              | login a user                          | users         |
+| POST   | /api/auth/signup                | sign up a user                        | users         |
+| POST   | /api/auth/login                 | login a user                          | users         |
 
 ### Testing
 
